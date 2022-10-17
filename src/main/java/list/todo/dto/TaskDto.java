@@ -28,4 +28,16 @@ public class TaskDto {
         private boolean completed;
         private int id;
     }
+
+    @Getter
+    @Setter
+    @AllArgsConstructor
+    public static class Patch {
+
+        @NotBlank(message = "Please write something!")
+        private String title;
+        private int order;
+        private boolean completed;
+        private int id;
+    }
 }

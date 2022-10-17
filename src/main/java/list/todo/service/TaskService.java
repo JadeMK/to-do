@@ -46,6 +46,10 @@ public class TaskService {
         taskRepository.delete(task);
     }
 
+    public void deleteTasks() {
+        taskRepository.deleteAll();
+    }
+
     public Task findVerifiedTask(int id) {
         Optional<Task> optionalTask = taskRepository.findById(id);
         return optionalTask.orElseThrow(() -> new BusinessLogicException(ExceptionCode.TASK_NOT_FOUND));
